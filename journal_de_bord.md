@@ -17,4 +17,5 @@
 - mis le robot à charger
 - cherché de l'inspiration sur Internet:
     - robot simple qui sait danser: https://www.youtube.com/watch?v=0OdFiLpGJ04
-    - 
+    - une idée du visuel:
+    - <img src="https://github.com/user-attachments/assets/064fe0cf-b468-49aa-8968-caf757a471ee" alt="Wall-e reference" width="300">
