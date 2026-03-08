@@ -22,3 +22,9 @@
 
 ## Date 08/03/2026
 - cherché des commandes pour le robot 
+- essayé un code facile en utilisant la librairie PyBricks
+- le robot n'avait pas PyBricks installé
+- j'ai essayé avec EV3 classique
+- cela ne marchait pas non plus
+- j'ai voulu installer PyBricks sur le robot, pas reussi
+- j'ai fait un e-mail à M.Andonie
