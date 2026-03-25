@@ -28,3 +28,9 @@
 - cela ne marchait pas non plus
 - j'ai voulu installer PyBricks sur le robot, pas reussi
 - j'ai fait un e-mail à M.Andonie
+
+## Date 23/03/2026
+- réussi à connecter le robot à mon ordi (c'est déjà ça)
+- "ModuleNotFoundError: No module named 'pybricks'" toujours et encore
+- j'ai supprimé tous les projets précédants du robot depuis mon ordi
+- écrit un code simple, ne marche pas mais fait acte de présence 
