@@ -45,11 +45,11 @@
 
 ## Vacances 10/04 - 19/04 
 - reflechi à la problématique
-      - Faire une roue
-      - Faire une roulade
-      - Faire un salto plus simple?
-      - Faire de la balançoire 
-
+- cherché de l'inspiration sur Internet:
+    - Faire une roue
+    - Faire une roulade
+    - Faire un salto plus simple?
+    - Faire de la balançoire 
 
 
 
