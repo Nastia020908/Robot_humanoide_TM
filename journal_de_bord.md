@@ -6,7 +6,7 @@
 - Reflechi aux détails
 
 ## Date 17/02/2026
-### RDV avec M. Andonie
+### RDV avec M. Andonie 
 - fuionné les 2 dépots
 - disscuté des fonctionalités
 - j'ai reçu le futur robot légo et des capteurs 
@@ -37,7 +37,7 @@
 - écrit un code simple, ne marche pas mais fait acte de présence 
 
 ## Date 02/04/2026
-### RDV avec M. Andonie
+### RDV avec M. Andonie 
 - enfin résolu le problème de PyBricks
 - testé la commande beep et tout marche
 - disscuté de la problématique
@@ -51,6 +51,32 @@
     - Faire un salto plus simple?
     - Faire de la balançoire 
 
+## Date 20/04/2026
+- précisé la problématique
+- le robot fera de la balançoire
 
+## Date 21/04/2026
+- cherché de l'inspiration
+- un bonhome qui fait de la balançoire:
+    - https://www.youtube.com/watch?v=Lcz2Cvhb53g
+    - la balançoire bougée par le moteur
+    - pas le but, car mon robot devra bouger lui meme
+ 
+## Date 23/04/2026
+### RDV avec M. Andonie
+- déplacé dû à mon dentiste → 04/05/2026
 
+## Date 29/04/2026
+- documentation
+- visionné un cours de physique sur les pendules: 
+    - https://www.youtube.com/watch?v=Lcz2Cvhb53gFaire
+    - accélère au centre, ralentit aux extrémités
+    - énergie potentielle → cinétique
+ 
+## Date 02/05/2026
+- testé les 4 sensors
+- filmé des vidéos
+- 2/4 ont très bien marché
+- le gyrosensor a pas marché dutout
+- le deterteur de couleur beug
 
