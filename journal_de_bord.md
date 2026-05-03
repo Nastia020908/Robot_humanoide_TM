@@ -32,5 +32,25 @@
 ## Date 23/03/2026
 - réussi à connecter le robot à mon ordi (c'est déjà ça)
 - "ModuleNotFoundError: No module named 'pybricks'" toujours et encore
+- j'ai lu le document python
 - j'ai supprimé tous les projets précédants du robot depuis mon ordi
 - écrit un code simple, ne marche pas mais fait acte de présence 
+
+## Date 02/04/2026
+### RDV avec M. Andonie
+- enfin résolu le problème de PyBricks
+- testé la commande beep et tout marche
+- disscuté de la problématique
+- question consernant les directives
+
+## Vacances 10/04 - 19/04 
+- reflechi à la problématique
+- cherché de l'inspiration sur Internet:
+    - Faire une roue
+    - Faire une roulade
+    - Faire un salto plus simple?
+    - Faire de la balançoire 
+
+
+
+
