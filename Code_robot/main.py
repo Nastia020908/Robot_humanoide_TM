@@ -12,14 +12,58 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 
 ev3 = EV3Brick()
 
-left_motor = Motor(Port.A)
-right_motor = Motor(Port.D)
-color_sensor = ColorSensor(Port.S4)      
-distance_sensor = UltrasonicSensor(Port.S1)
-touch_sensor = TouchSensor(Port.S3)
-gyro = GyroSensor(Port.S2)
+leg_left = Motor(Port.A)
+leg_right = Motor(Port.B)
+back_left = Motor(Port.C)
+back_right = Motor(Port.D)
+
+# color_sensor = ColorSensor(Port.S4)      
+# distance_sensor = UltrasonicSensor(Port.S1)
+# touch_sensor = TouchSensor(Port.S3)
+# gyro = GyroSensor(Port.S2)
+
+
+# Variables
+
+SPEED_LEG = 300      # °/s
+SPEED_BACK = 300
+
+LEG_ANGLE = 50       # Extension des jambes
+BACK_ANGLE = 35      # Inclinaison du dos
+
+# Position d'extension
+
+def extend():
+
+    # Jambes
+    leg_left.run_target(SPEED_LEG, LEG_ANGLE, wait=False)
+    leg_right.run_target(SPEED_LEG, LEG_ANGLE, wait=False)
+
+    # Dos 
+    back_left.run_target(SPEED_BACK, BACK_ANGLE, wait=False)
+    back_right.run_target(SPEED_BACK, -BACK_ANGLE, wait=True)
+
+# Retour en boule
+
+def retract():
+
+    # Jambes
+    leg_left.run_target(SPEED_LEG, 0, wait=False)
+    leg_right.run_target(SPEED_LEG, 0, wait=False)
+
+    # Dos
+    back_left.run_target(SPEED_BACK, 0, wait=False)
+    back_right.run_target(SPEED_BACK, 0, wait=True)
 
 # Write your program here.
+
+while True:
+
+    extend()
+    wait(300)
+
+    retract()
+    wait(300)
 
 
 # le beep pour tester
@@ -47,8 +91,10 @@ gyro = GyroSensor(Port.S2)
 
 #while True:
     #color = color_sensor.color()
+    #ev3.screen.clear()
+    #ev3.screen.print("Couleur détectée", color)
 
-    #if color == "BLUE":
+    #if color == Color.BLUE:        
         #left_motor.stop(Stop.BRAKE)
         #right_motor.stop(Stop.BRAKE)
         #ev3.speaker.beep()
@@ -99,3 +145,4 @@ gyro = GyroSensor(Port.S2)
 
 #ev3.screen.clear()
 #ev3.screen.print("Angle final:", angle)
+
