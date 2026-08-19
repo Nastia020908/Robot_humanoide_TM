@@ -17,10 +17,7 @@ leg_right = Motor(Port.B)
 back_left = Motor(Port.C)
 back_right = Motor(Port.D)
 
-# color_sensor = ColorSensor(Port.S4)      
-# distance_sensor = UltrasonicSensor(Port.S1)
-# touch_sensor = TouchSensor(Port.S3)
-# gyro = GyroSensor(Port.S2)
+gyro = GyroSensor(Port.S2)
 
 
 # Variables
@@ -28,8 +25,10 @@ back_right = Motor(Port.D)
 SPEED_LEG = 300      # °/s
 SPEED_BACK = 300
 
-LEG_ANGLE = 50       # Extension des jambes
-BACK_ANGLE = 35      # Inclinaison du dos
+LEG_ANGLE = 90       # Extension des jambes
+BACK_ANGLE = 60      # Inclinaison du dos
+
+TIME_IN_TOTAL = 60
 
 # Position d'extension
 
@@ -40,8 +39,8 @@ def extend():
     leg_right.run_target(SPEED_LEG, LEG_ANGLE, wait=False)
 
     # Dos 
-    back_left.run_target(SPEED_BACK, BACK_ANGLE, wait=False)
-    back_right.run_target(SPEED_BACK, -BACK_ANGLE, wait=True)
+    back_left.run_target(SPEED_BACK, 0, wait=False)
+    back_right.run_target(SPEED_BACK, 0, wait=True)
 
 # Retour en boule
 
@@ -52,18 +51,41 @@ def retract():
     leg_right.run_target(SPEED_LEG, 0, wait=False)
 
     # Dos
-    back_left.run_target(SPEED_BACK, 0, wait=False)
-    back_right.run_target(SPEED_BACK, 0, wait=True)
+    back_left.run_target(SPEED_BACK, BACK_ANGLE, wait=False)
+    back_right.run_target(SPEED_BACK, -BACK_ANGLE, wait=True)
 
 # Write your program here.
 
-while True:
+# Remettre le capteur à 0
+gyro.reset_angle()
 
-    extend()
-    wait(300)
+# Impulsion initiale
+extend()
+wait(500)
+retract()
+wait(500)
 
+# Chrono
+timer = StopWatch()
+
+while timer.time() < TIME_IN_TOTAL * 1000:
+
+    speed_robot = gyro.speed()
+    angle_robot = gyro.angle()
+
+    if abs(speed_robot) < 10 and angle_robot > 0:
+    # Point extrême avant
     retract()
-    wait(300)
+
+    elif abs(speed_robot) < 10 and angle_robot < 0:
+    # Point extrême arrière
+    extend()
+
+    else:
+    # Rien faire
+    pass
+
+    
 
 
 # le beep pour tester
@@ -139,7 +161,7 @@ while True:
 # lecture de l'angle final
 #angle = gyro.angle()
 
-# affichage sur écran EV3
+# affichage sur écran EV3, sert a rien on a deja tout
 #from pybricks.hubs import EV3Brick
 #ev3 = EV3Brick()
 
