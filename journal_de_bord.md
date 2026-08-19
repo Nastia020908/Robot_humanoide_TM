@@ -101,6 +101,8 @@
 - mis au moints les objectifs de la présentation intermédiaire 
 - fixé la date et l'heure → 08/06/2026 à 9h30 en G007
 
+## Début de la semaine TM 
+
 ## Date 29/05/2026
 ### RDV avec Mme Bula
 - allé chercher du matériel en salle des travaux manuels
@@ -119,3 +121,95 @@
 ## Date 06/06/2026
 - commencé à préparer la présentation intermédiaire
 - avancé la lecture du cours sur les corps solides (os)
+
+## Date 07/06/2026
+- finalisé ma présentation intermédiaire
+- répété la partie orale de la présentation
+
+## Date 08/06/2026
+- présentation intermédiaire effectuée
+- les conseils des mentors:
+    - mieux gérer les timings
+    - bien avancer pendant la semaine de tm
+    - consulter le cours de Mme Leitner sur les oscillations
+    - moins se baser sur les vidéos youtube et créer tout moi-même
+
+### Travail en salle des travaux manuels
+- modifié le croquis pour augmenter la stabilité
+- poncé et coupé le bois différement 
+- collé et vicé l'entièreté ensemble
+- ajouté des crochers
+- accroché un bout de bois avec des cordes
+
+## Date 10/06/2026
+- travaillé sur le mouvement de pendule
+- relu les cours à M. Andonie
+- fait une fiche de revision avec les définitions des notions
+- désespéré au bout d'un moment, car je n'avais peu compris
+
+## Date 11/06/2026
+### RDV avec M. Andonie
+- reçu des explications sur le mouvement de pendule
+- fait un croquis que j'ai précieusement gardé 
+- défini des salles ou je puisse travailler → G00? et sous sol
+- pris les pièces principales pour la construction du robot
+
+## Date 11/06/2026
+- filmé de profil deux volontaires qui faisaient de la balançoire
+- coupé et ralenti les vidéos
+
+## Fin de la semaine TM 
+
+## Date 17/06/2026
+- écrit un code pour pouvoir tester le robot une fois fini:
+    - un code très simple et petit, que 2 mouvements
+    - le robot plie et déplie ses jambes
+    - il panche et reéquilibre son dos
+    - coordonne les 2 mouvements 
+
+## Date 24/06/2026
+### Travail en salle G00? et sous sol
+- construit le bas du corps du robot humanoide:
+    - jambes mobiles → moteurs en tant que acticulations
+    - bassin solide → rattaché à un moteur pour le dos
+
+## Date 28/06/2026
+### Travail depuis chez moi
+- apporté des modifications pour rendre le robot plus solide
+    - meilleur choix des pièces connectrices
+    - remplacer chaque groupe de petites pièces par une plus grosse
+      → nous évite des connections inutiles et on gagne en stabilité
+    - prévoir de la place entre les pièces pour des cables
+
+## Date 03/07/2026
+### Travail en salle G00? et sous sol
+- construit le haut du corps du robot humanoide:
+    - bien fixé la brique intelligente EV3 → sur le moteur du dos
+    - difficulé à tout sécuriser → le moteur du dos se déplie tout seul
+    - petits bras mobiles → rattachés à la brique intelligente EV3
+
+- testé à placer le robot sur la balançoire:
+    - tient pas en equilibre → doit être fixé à la balançoire
+    - fait la bonne taille et un bon poids
+    - les pieds touchent pas le sol → se mettra en mouvement sans pousser
+    - mesuré ou le robot sera fixé
+
+- envoyé le code (fait le 17/06/2026) au robot:
+    - le code s'envoie point
+    - charge en boucle
+      → problème à résoudre
+
+## Vacances d'été 
+### Tout le travail accompli confondu, sans dates précises
+- commencé la rédaction de la partie écrite
+    - 3 pages faites
+    - la page du titre
+    - la préface
+    - l'introduction 
+- fait des recherches pour la partie théorique
+    - approfondi la compréhension du mouvement de pendule
+    - pris des notes sur ce dernier
+- analysé la vidéo des volontaires qui se balancent (filmée le 11/06/2026)
+    - comparé la manière "humaine" à se balancer à une autre possible dite "plus efficace"
+    - choisi de programmer de manière humaine → question de simplicité
+    - pris des notes là-dessus
