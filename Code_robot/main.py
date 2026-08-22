@@ -12,80 +12,76 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 
 ev3 = EV3Brick()
 
-leg_left = Motor(Port.A)
+leg_left = Motor(Port.C)
 leg_right = Motor(Port.B)
-back_left = Motor(Port.C)
-back_right = Motor(Port.D)
+back_left = Motor(Port.D)
+back_right = Motor(Port.A)
 
-gyro = GyroSensor(Port.S2)
+gyro = GyroSensor(Port.S4)
 
 
 # Variables
 
-SPEED_LEG = 300      # °/s
+SPEED_LEG = 500      # °/s
 SPEED_BACK = 300
 
 LEG_ANGLE = 90       # Extension des jambes
-BACK_ANGLE = 60      # Inclinaison du dos
+BACK_ANGLE = 15      # Inclinaison du dos
 
-TIME_IN_TOTAL = 60
+TIME_IN_TOTAL = 60   # en millisecondes
 
 # Position d'extension
 
 def extend():
 
-    # Jambes
-    leg_left.run_target(SPEED_LEG, LEG_ANGLE, wait=False)
-    leg_right.run_target(SPEED_LEG, LEG_ANGLE, wait=False)
+   # Jambes
+    leg_left.run_target(SPEED_LEG, -LEG_ANGLE, wait=False)
+    leg_right.run_target(SPEED_LEG, -LEG_ANGLE, wait=False)
 
-    # Dos 
-    back_left.run_target(SPEED_BACK, 0, wait=False)
-    back_right.run_target(SPEED_BACK, 0, wait=True)
+    wait(1000)
 
-# Retour en boule
+    leg_left.hold()
+    leg_right.hold()
 
+    wait(100)
+
+    
 def retract():
 
     # Jambes
     leg_left.run_target(SPEED_LEG, 0, wait=False)
     leg_right.run_target(SPEED_LEG, 0, wait=False)
 
-    # Dos
-    back_left.run_target(SPEED_BACK, BACK_ANGLE, wait=False)
-    back_right.run_target(SPEED_BACK, -BACK_ANGLE, wait=True)
+    wait(1000)
 
-# Write your program here.
+    leg_left.hold()
+    leg_right.hold()
 
-# Remettre le capteur à 0
-gyro.reset_angle()
+    wait(100)
+ 
 
-# Impulsion initiale
-extend()
-wait(500)
-retract()
-wait(500)
+def reset_all_angles():
 
-# Chrono
-timer = StopWatch()
+    # Moteurs 
+    leg_left.reset_angle(0)
+    leg_right.reset_angle(0)
+    back_left.reset_angle(0)
+    back_right.reset_angle(0)
 
-while timer.time() < TIME_IN_TOTAL * 1000:
+
+reset_all_angles()
+gyro.reset_angle(0)
+
+while True:
 
     speed_robot = gyro.speed()
     angle_robot = gyro.angle()
 
-    if abs(speed_robot) < 10 and angle_robot > 0:
-    # Point extrême avant
-    retract()
-
-    elif abs(speed_robot) < 10 and angle_robot < 0:
-    # Point extrême arrière
-    extend()
-
-    else:
-    # Rien faire
-    pass
-
+    ev3.screen.clear()
+    ev3.screen.print("vitesse :", speed_robot)
+    ev3.screen.print("angle :", angle_robot)
     
+
 
 
 # le beep pour tester
