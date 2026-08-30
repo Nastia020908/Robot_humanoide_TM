@@ -168,7 +168,7 @@
     - coordonne les 2 mouvements 
 
 ## Date 24/06/2026
-### Travail en salle G00? et sous sol
+### Travail en salle G009 et sous sol
 - construit le bas du corps du robot humanoide:
     - jambes mobiles → moteurs en tant que acticulations
     - bassin solide → rattaché à un moteur pour le dos
@@ -182,7 +182,7 @@
     - prévoir de la place entre les pièces pour des cables
 
 ## Date 03/07/2026
-### Travail en salle G00? et sous sol
+### Travail en salle G009 et sous sol
 - construit le haut du corps du robot humanoide:
     - bien fixé la brique intelligente EV3 → sur le moteur du dos
     - difficulé à tout sécuriser → le moteur du dos se déplie tout seul
@@ -213,3 +213,46 @@
     - comparé la manière "humaine" à se balancer à une autre possible dite "plus efficace"
     - choisi de programmer de manière humaine → question de simplicité
     - pris des notes là-dessus
+
+## Date 14/08/2026
+- vicé le robot à la balançoire
+- il peut être librement détaché si besoin
+
+## Date 20/08/2026
+### Travail depuis chez moi
+- écrit le premier jet du code
+- si tout se passe bien, il ne reste plus qu'à tester
+
+## Date 21/08/2026
+- réussi à transporter la balançoire et le robot chez moi
+- les tests peuvent enfin avoir lieu
+
+## Date 22/08/2026
+### Travail depuis chez moi
+- testé le jet 1 du code, il ne marche pas
+- testé les articulations une par une
+- le dos ne se remplie pas → le moteur pas assez puissant
+- crée un programme qui bouge les articulations en même temps
+- le dos casse le mouvement → le robot bougera donc pas le dos
+- création de la version du programme sans le dos
+- le robot se balance, mais avec de l'aide et au movais moment
+
+## Date 23/08/2026
+### Travail depuis chez moi
+- testé le capteur gyroscopique
+- detecte que la vitesse angulaire et PAS l'angle
+- changé les modes manuellement, sans résultat
+- affiché les valeurs, cela n'aide pas
+- élaboré un code qui fonctionne que avec la vitesse angulaire
+    -  cherché le moment ou la vitesse change de signe → point mort
+- identifié si le point mort était à l'arrière ou devant
+    -  véfifié si on passe de vitesse ang. positive à négative ou l'inverse
+### Conclusion:
+- le capteur est pas précis, même en élargissant le seuil d'activation
+- le capteur mesure pas l'angle mais que la vitesse ang.
+### Solution: 
+- trouvé une nouvelle variante du programme qui fonctionne, mais au mauvais moment
+
+## Dates 24/08/2026 - 31/08/2026
+### Travail depuis chez moi
+- continué l'avancement de la partie écrite
