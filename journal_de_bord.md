@@ -151,7 +151,7 @@
 ### RDV avec M. Andonie
 - reçu des explications sur le mouvement de pendule
 - fait un croquis que j'ai précieusement gardé 
-- défini des salles ou je puisse travailler → G00? et sous sol
+- défini des salles ou je puisse travailler → G009 et sous sol
 - pris les pièces principales pour la construction du robot
 
 ## Date 11/06/2026
@@ -187,13 +187,11 @@
     - bien fixé la brique intelligente EV3 → sur le moteur du dos
     - difficulé à tout sécuriser → le moteur du dos se déplie tout seul
     - petits bras mobiles → rattachés à la brique intelligente EV3
-
 - testé à placer le robot sur la balançoire:
     - tient pas en equilibre → doit être fixé à la balançoire
     - fait la bonne taille et un bon poids
     - les pieds touchent pas le sol → se mettra en mouvement sans pousser
     - mesuré ou le robot sera fixé
-
 - envoyé le code (fait le 17/06/2026) au robot:
     - le code s'envoie point
     - charge en boucle
@@ -264,9 +262,9 @@
 
 ### RDV avec M. Andonie (27/08/2026)
 - reçu un 2 eme capteur gyro
-  → le même capteur ne peut pas afficher la vitesse ang et l'angle à la fois
+  - → le même capteur ne peut pas afficher la vitesse ang et l'angle à la fois
 - reçu plus de grands moteurs
-  → pour reconstruire le dos et pour qu'il marche enfin
+  - → pour reconstruire le dos et pour qu'il marche enfin
 - discuté de tous les essais que j'ai fait
 - conclu que il faut essayer encore
 
@@ -274,14 +272,14 @@
 - reconstruit complètement le dos du robot
   - changé les moteurs du dos
   - changé la manière de fixer l'articulation
-    → le dos marche
+    - → le dos marche
 - ajouté le 2 eme capteur gyro
   - modifié le code pour l'inclure
   - fixé sur le robot
-  → j'ai enfin la vitesse ang et l'angle à la fois
+  - → j'ai enfin la vitesse ang et l'angle à la fois
 - le dos mobile déséquilibrait le siège lors du mouvement
   - raccourci le siège
   - modifié le code de base
-    → le mouvement d'extension se fait différemment maintenant
+    - → le mouvement d'extension se fait différemment maintenant
 - testé plusieurs nouvelles idées de code
-→ résultat toujour le même, le robot détecte mal les points morts
+- → résultat toujour le même, le robot détecte mal les points morts
