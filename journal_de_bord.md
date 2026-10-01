@@ -235,7 +235,7 @@
 - crée un programme qui bouge les articulations en même temps
 - le dos casse le mouvement → le robot bougera donc pas le dos
 - création de la version du programme sans le dos
-- le robot se balance, mais avec de l'aide et au movais moment
+- le robot se balance, mais avec de l'aide et au mauvais moment
 
 ## Date 23/08/2026
 ### Travail depuis chez moi
@@ -253,6 +253,35 @@
 ### Solution: 
 - trouvé une nouvelle variante du programme qui fonctionne, mais au mauvais moment
 
-## Dates 24/08/2026 - 31/08/2026
+## Dates 24/08/2026 - 01/09/2026
 ### Travail depuis chez moi
 - continué l'avancement de la partie écrite
+- fini le premier jet de l'écrit, contient tout sauf:
+    -  Résumé
+    -  Code
+    -  Analyse des résultats
+    -  Conclusion
+
+### RDV avec M. Andonie (27/08/2026)
+- reçu un 2 eme capteur gyro
+  → le même capteur ne peut pas afficher la vitesse ang et l'angle à la fois
+- reçu plus de grands moteurs
+  → pour reconstruire le dos et pour qu'il marche enfin
+- discuté de tous les essais que j'ai fait
+- conclu que il faut essayer encore
+
+### Date 30/08/2026
+- reconstruit complètement le dos du robot
+  - changé les moteurs du dos
+  - changé la manière de fixer l'articulation
+    → le dos marche
+- ajouté le 2 eme capteur gyro
+  - modifié le code pour l'inclure
+  - fixé sur le robot
+  → j'ai enfin la vitesse ang et l'angle à la fois
+- le dos mobile déséquilibrait le siège lors du mouvement
+  - raccourci le siège
+  - modifié le code de base
+    → le mouvement d'extension se fait différemment maintenant
+- testé plusieurs nouvelles idées de code
+→ résultat toujour le même, le robot détecte mal les points morts
