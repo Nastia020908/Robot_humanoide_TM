@@ -272,7 +272,7 @@
 - reconstruit complètement le dos du robot
   - changé les moteurs du dos
   - changé la manière de fixer l'articulation
-    - → le dos marche
+  - → le dos marche
 - ajouté le 2 eme capteur gyro
   - modifié le code pour l'inclure
   - fixé sur le robot
@@ -280,6 +280,6 @@
 - le dos mobile déséquilibrait le siège lors du mouvement
   - raccourci le siège
   - modifié le code de base
-    - → le mouvement d'extension se fait différemment maintenant
+  - → le mouvement d'extension se fait différemment maintenant
 - testé plusieurs nouvelles idées de code
 - → résultat toujour le même, le robot détecte mal les points morts
