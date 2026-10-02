@@ -28,7 +28,8 @@ SPEED_BACK = 200
 LEG_ANGLE = 90       # Extension des jambes
 BACK_ANGLE = 60      # Inclinaison du dos
 
-ZERO_GAP = 5
+ZERO_GAP = 2
+NOT_ZERO_GAP = 10
 
 # Fonctions
 
@@ -157,7 +158,7 @@ def spot_turning_points():
                 retract()
                 action_running = True
 
-        elif abs(speed_robot) > ZERO_GAP * 1.5:
+        elif abs(speed_robot) > NOT_ZERO_GAP:
             action_running = False
 
         else:
@@ -175,7 +176,7 @@ def spot_turning_points_upgraded():
         speed_robot = gyro_right.speed()
         angle_robot = gyro_left.angle()
 
-        if abs(speed_robot) > ZERO_GAP * 1.5:
+        if abs(speed_robot) > NOT_ZERO_GAP:
             was_moving = True
             action_running = False
 
@@ -201,7 +202,7 @@ def test_gyros_list():
     speed_values = []
     angle_values = []
 
-    for i in range(200):
+    for i in range(500):
 
         speed_robot = gyro_right.speed()
         angle_robot = gyro_left.angle()
@@ -209,7 +210,7 @@ def test_gyros_list():
         speed_values.append(speed_robot)
         angle_values.append(angle_robot)
 
-        wait(25)
+        wait(10)
 
     print("SPEED")
     for value in speed_values:
@@ -220,17 +221,24 @@ def test_gyros_list():
         print(value)
 
 def beep_at_turning_point():
-    
+
+    beeped = False
+
     while True:
 
-    speed_robot = gyro_right.speed()
+        speed_robot = gyro_right.speed()
 
-    if abs(speed_robot) < ZERO_GAP:
-        hub.speaker.beep()
+        if abs(speed_robot) < ZERO_GAP and not beeped:
+            ev3.speaker.beep()
+            beeped = True
 
-    wait(100)
+        if abs(speed_robot) > NOT_ZERO_GAP:
+            beeped = False
 
-test_gyros_list()
+        wait(10)
+
+
+beep_at_turning_point()
 
 
 
