@@ -312,6 +312,7 @@
 - théorème du centre de masse est faux → à refaire
 - travail de recherche en anglais « playground swing » → à chercher
 - théorie sur le moment d'inertie → à ajouter
+- schéma pour expliquer l'ajout de la hauteur → à faire
 - pistes possibles pour améliorer le code:
 	- modifier les fonctions `wait()`
 	- mieux positionner le capteur
