@@ -283,3 +283,37 @@
   - → le mouvement d'extension se fait différemment maintenant
 - testé plusieurs nouvelles idées de code
 - → résultat toujour le même, le robot détecte mal les points morts
+
+## Vacances d'automne
+### Dates 19/09 - 27/09 : semaine 1
+- corrigé le 1er jet selon le retour de M. Andonie
+- ajouté de la théorie sur les points suivants :
+	- comment augmenter l'énergie du système
+	- théorème du centre de masse
+- ajouté ces schémas :
+	- grandeurs physiques du pendule
+	- forces agissant sur une balançoire
+	- transformation de l'énergie
+
+### Dates 28/09 - 02/10 : semaine 2
+- ajouté les photos suivantes à celles qui existent déjà :
+	- brique intelligente EV3
+	- câbles
+	- pièces de LEGO
+- testé et filmé 5 codes différents avec le robot
+- écrit un code qui affiche toutes les valeurs lors du balancement
+- affiché ces valeurs avec un graphique → pour trouver la source du problème
+
+### 02/10 : visio avec M. Andonie
+- théorème du centre de masse est faux → à refaire
+- travail de recherche en anglais « playground swing » → à chercher
+- théorie sur le moment d'inertie → à ajouter
+- pistes possibles pour améliorer le code :
+	- modifier les fonctions `wait()`
+	- mieux positionner le capteur
+	- mettre la balançoire à l'horizontale
+	- effectuer une oscillation lentement avec les mains → afficher les valeurs
+- si pas de résultat le 04/01 → mettre dans l'écrit les meilleurs codes
+
+### Dates 02/10 - 04/10 : semaine 2
+
