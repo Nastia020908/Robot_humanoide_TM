@@ -1,17 +1,17 @@
 # Journal de bord
 
-## Date 16/02/2026
+## Date 16/02
 - visionné Infotrack
 - lu les directives
 - réfléchi aux détails
 
-## Date 17/02/2026
+## Date 17/02
 ### RDV avec M. Andonie
 - fusionné les 2 dépôts
 - discuté des fonctionnalités
 - j'ai reçu le futur robot Lego et des capteurs
 
-## Date 01/03/2026
+## Date 01/03
 - renommé le dossier principal
 - supprimé le dossier en trop
 - mis le robot à charger
@@ -20,7 +20,7 @@
     - une idée du visuel:
     - <img src="https://github.com/user-attachments/assets/064fe0cf-b468-49aa-8968-caf757a471ee" alt="Wall-e reference" width="300">
 
-## Date 08/03/2026
+## Date 08/03
 - cherché des commandes pour le robot
 - essayé un code facile en utilisant la librairie PyBricks
 - le robot n'avait pas PyBricks installé
@@ -29,14 +29,14 @@
 - j'ai voulu installer PyBricks sur le robot, pas réussi
 - j'ai fait un e-mail à M. Andonie
 
-## Date 23/03/2026
+## Date 23/03
 - réussi à connecter le robot à mon ordi (c'est déjà ça)
 - `"ModuleNotFoundError: No module named 'pybricks'"` toujours et encore
 - j'ai lu le document Python
 - j'ai supprimé tous les projets précédents du robot depuis mon ordi
 - écrit un code simple, ne marche pas mais fait acte de présence
 
-## Date 02/04/2026
+## Date 02/04
 ### RDV avec M. Andonie
 - enfin résolu le problème de PyBricks
 - testé la commande `beep` et tout marche
@@ -51,65 +51,65 @@
     - faire un salto plus simple?
     - faire de la balançoire
 
-## Date 20/04/2026
+## Date 20/04
 - précisé la problématique
 - le robot fera de la balançoire
 
-## Date 21/04/2026
+## Date 21/04
 - cherché de l'inspiration
 - un bonhomme qui fait de la balançoire:
     - https://www.youtube.com/watch?v=Lcz2Cvhb53g
     - la balançoire bougée par le moteur
     - pas le but, car mon robot devra bouger lui-même
 
-## Date 23/04/2026
+## Date 23/04
 ### RDV avec M. Andonie
-- déplacé dû à mon dentiste → 04/05/2026
+- déplacé dû à mon dentiste → 04/05
 
-## Date 29/04/2026
+## Date 29/04
 - documentation
 - visionné un cours de physique sur les pendules:
     - https://www.youtube.com/watch?v=Lcz2Cvhb53gFaire
     - accélère au centre, ralentit aux extrémités
     - énergie potentielle → cinétique
 
-## Date 02/05/2026
+## Date 02/05
 - testé les 4 sensors
 - filmé des vidéos
 - 2/4 ont très bien marché
 - le gyrosensor n'a pas marché du tout
 - le capteur de couleur bug
 
-## Date 04/05/2026
+## Date 04/05
 ### RDV avec M. Andonie
 - la problématique est définie
 - les sensors ont été encore testés
 - le gyrosensor a été remplacé
 - le problème du capteur couleur est réglé
 
-## Date 26/05/2026
+## Date 26/05
 - réalisé le croquis de ma future balançoire
 - commencé la lecture du cours sur le moment de force (df)
 
-## Date 27/05/2026
+## Date 27/05
 - fini la lecture du cours sur le moment de force (df)
 - commencé la lecture du cours sur le corps solide (os)
 
-## Date 28/05/2026
+## Date 28/05
 ### RDV avec M. Andonie
 - discuté de ce que j'ai pu faire
 - mis au point les objectifs de la présentation intermédiaire
-- fixé la date et l'heure → 08/06/2026 à 9h30 en G007
+- fixé la date et l'heure → 08/06 à 9h30 en G007
 
 ## Début de la semaine TM 
 
-## Date 29/05/2026
+## Date 29/05
 ### RDV avec Mme Bula
 - allé chercher du matériel en salle des travaux manuels
 - discuté de ma balançoire et du croquis
-- obtenu une autorisation de venir dans cette salle → 05/06/2026
+- obtenu une autorisation de venir dans cette salle → 05/06
 
-## Date 05/06/2026
+## Date 05/06
 ### Travail en salle des travaux manuels
 - réalisé un autre croquis plus précis
 - préparé les instruments et le matériel nécessaire
@@ -118,15 +118,15 @@
     - mesuré précisément les distances
     - coupé les bouts de bois avec une scie manuelle
 
-## Date 06/06/2026
+## Date 06/06
 - commencé à préparer la présentation intermédiaire
 - avancé la lecture du cours sur les corps solides (os)
 
-## Date 07/06/2026
+## Date 07/06
 - finalisé ma présentation intermédiaire
 - répété la partie orale de la présentation
 
-## Date 08/06/2026
+## Date 08/06
 - présentation intermédiaire effectuée
 - les conseils des mentors:
     - mieux gérer les timings
@@ -140,39 +140,39 @@
 - ajouté des crochets
 - accroché un bout de bois avec des cordes
 
-## Date 10/06/2026
+## Date 10/06
 - travaillé sur le mouvement de pendule
 - relu les cours de M. Andonie
 - fait une fiche de révision avec les définitions des notions
 - désespéré au bout d'un moment, car je n'avais pas compris grand-chose
 
-## Date 11/06/2026
+## Date 11/06
 ### RDV avec M. Andonie
 - reçu des explications sur le mouvement de pendule
 - fait un croquis que j'ai précieusement gardé
 - défini des salles où je puisse travailler → G009 et sous-sol
 - pris les pièces principales pour la construction du robot
 
-## Date 11/06/2026
+## Date 11/06
 - filmé de profil deux volontaires qui faisaient de la balançoire
 - coupé et ralenti les vidéos
 
 ## Fin de la semaine TM
 
-## Date 17/06/2026
+## Date 17/06
 - écrit un code pour pouvoir tester le robot une fois fini:
     - un code très simple et petit, avec 2 mouvements
     - le robot plie et déplie ses jambes
     - il penche et rééquilibre son dos
     - coordonne les 2 mouvements
 
-## Date 24/06/2026
+## Date 24/06
 ### Travail en salle G009 et sous-sol
 - construit le bas du corps du robot humanoïde:
     - jambes mobiles → moteurs en tant qu'articulations
     - bassin solide → rattaché à un moteur pour le dos
 
-## Date 28/06/2026
+## Date 28/06
 ### Travail depuis chez moi
 - apporté des modifications pour rendre le robot plus solide
     - meilleur choix des pièces connectrices
@@ -180,7 +180,7 @@
     - → nous évite des connexions inutiles et on gagne en stabilité
     - prévoir de la place entre les pièces pour des câbles
 
-## Date 03/07/2026
+## Date 03/07
 ### Travail en salle G009 et sous-sol
 - construit le haut du corps du robot humanoïde:
     - bien fixé la brique intelligente EV3 → sur le moteur du dos
@@ -191,7 +191,7 @@
     - fait la bonne taille et un bon poids
     - les pieds ne touchent pas le sol → se mettra en mouvement sans pousser
     - mesuré où le robot sera fixé
-- envoyé le code (fait le 17/06/2026) au robot:
+- envoyé le code (fait le 17/06) au robot:
     - le code ne s'envoie point
     - charge en boucle
     - → problème à résoudre
@@ -207,25 +207,25 @@
 - fait des recherches pour la partie théorique
     - approfondi la compréhension du mouvement de pendule
     - pris des notes sur ce dernier
-- analysé la vidéo des volontaires qui se balancent (filmée le 11/06/2026)
+- analysé la vidéo des volontaires qui se balancent (filmée le 11/06)
     - comparé la manière "humaine" à se balancer à une autre possible dite "plus efficace"
     - choisi de programmer de manière humaine → question de simplicité
     - pris des notes là-dessus
 
-## Date 14/08/2026
+## Date 14/08
 - vissé le robot à la balançoire
 - il peut être librement détaché si besoin
 
-## Date 20/08/2026
+## Date 20/08
 ### Travail depuis chez moi
 - écrit le premier jet du code
 - si tout se passe bien, il ne reste plus qu'à tester
 
-## Date 21/08/2026
+## Date 21/08
 - réussi à transporter la balançoire et le robot chez moi
 - les tests peuvent enfin avoir lieu
 
-## Date 22/08/2026
+## Date 22/08
 ### Travail depuis chez moi
 - testé le jet 1 du code, il ne marche pas
 - testé les articulations une par une
@@ -235,7 +235,7 @@
 - création de la version du programme sans le dos
 - le robot se balance, mais avec de l'aide et au mauvais moment
 
-## Date 23/08/2026
+## Date 23/08
 ### Travail depuis chez moi
 - testé le capteur gyroscopique
 - il détecte que la vitesse angulaire et PAS l'angle
@@ -251,7 +251,7 @@
 ### Solution:
 - trouvé une nouvelle variante du programme qui fonctionne, mais au mauvais moment
 
-## Dates 24/08/2026 - 01/09/2026
+## Dates 24/08 - 01/09
 (contient le 27/08 et le 30/08)
 ### Travail depuis chez moi
 - continué l'avancement de la partie écrite
@@ -270,7 +270,7 @@
 - discuté de tous les essais que j'ai fait
 - conclu qu'il faut essayer encore
 
-## Date 30/08/2026
+## Date 30/08
 - reconstruit complètement le dos du robot
   - changé les moteurs du dos
   - changé la manière de fixer l'articulation
