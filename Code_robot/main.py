@@ -12,75 +12,226 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 
 ev3 = EV3Brick()
 
-leg_left = Motor(Port.C)
-leg_right = Motor(Port.B)
-back_left = Motor(Port.D)
-back_right = Motor(Port.A)
+leg_left = Motor(Port.D)
+leg_right = Motor(Port.A)
+back_left = Motor(Port.C)
+back_right = Motor(Port.B)
 
-gyro = GyroSensor(Port.S4)
-
+gyro_right = GyroSensor(Port.S2)
+gyro_left = GyroSensor(Port.S3)
 
 # Variables
 
-SPEED_LEG = 500      # °/s
-SPEED_BACK = 300
+SPEED_LEG = 400      # °/s
+SPEED_BACK = 200
 
 LEG_ANGLE = 90       # Extension des jambes
-BACK_ANGLE = 15      # Inclinaison du dos
+BACK_ANGLE = 60      # Inclinaison du dos
 
-TIME_IN_TOTAL = 60   # en millisecondes
+ZERO_GAP = 5
 
-# Position d'extension
+# Fonctions
 
 def extend():
 
-   # Jambes
+    back_left.run_target(SPEED_BACK, 0, wait=False)
+    back_right.run_target(SPEED_BACK, 0, wait=True)
     leg_left.run_target(SPEED_LEG, -LEG_ANGLE, wait=False)
-    leg_right.run_target(SPEED_LEG, -LEG_ANGLE, wait=False)
+    leg_right.run_target(SPEED_LEG, -LEG_ANGLE, wait=True)
+    
 
     wait(1000)
 
     leg_left.hold()
     leg_right.hold()
+    back_left.hold()
+    back_right.hold()
 
-    wait(100)
+    wait(1000)
 
     
 def retract():
 
-    # Jambes
+    back_left.run_target(SPEED_LEG, -BACK_ANGLE, wait=False)
+    back_right.run_target(SPEED_LEG, -BACK_ANGLE, wait=False)
     leg_left.run_target(SPEED_LEG, 0, wait=False)
-    leg_right.run_target(SPEED_LEG, 0, wait=False)
-
+    leg_right.run_target(SPEED_LEG, 0, wait=True)
+    
     wait(1000)
 
     leg_left.hold()
     leg_right.hold()
+    back_left.hold()
+    back_right.hold()
 
-    wait(100)
+    wait(1000)
  
 
 def reset_all_angles():
 
-    # Moteurs 
     leg_left.reset_angle(0)
     leg_right.reset_angle(0)
     back_left.reset_angle(0)
     back_right.reset_angle(0)
 
 
-reset_all_angles()
-gyro.reset_angle(0)
+def check_gyros(): 
 
-while True:
+    gyro_left.reset_angle(0)
 
-    speed_robot = gyro.speed()
-    angle_robot = gyro.angle()
+    while True:
 
-    ev3.screen.clear()
-    ev3.screen.print("vitesse :", speed_robot)
-    ev3.screen.print("angle :", angle_robot)
+        speed_robot = gyro_right.speed()
+        angle_robot = gyro_left.angle()
+
+        ev3.screen.clear()
+        ev3.screen.print("vitesse :", speed_robot)
+        ev3.screen.print("angle :", angle_robot)
     
+def extend_retract():
+
+    back_left.run_target(SPEED_BACK, 0, wait=False)
+    back_right.run_target(SPEED_BACK, 0, wait=True)
+    leg_left.run_target(SPEED_LEG, -LEG_ANGLE, wait=False)
+    leg_right.run_target(SPEED_LEG, -LEG_ANGLE, wait=True)
+    
+    wait(1000)
+
+    back_left.run_target(SPEED_LEG, -BACK_ANGLE, wait=False)
+    back_right.run_target(SPEED_LEG, -BACK_ANGLE, wait=False)
+    leg_left.run_target(SPEED_LEG, 0, wait=False)
+    leg_right.run_target(SPEED_LEG, 0, wait=True)
+
+    wait(1000)
+
+def extend_retract_test():
+
+    extend_retract()
+    extend_retract()
+    extend_retract()
+    extend_retract()
+
+def changing_signs():
+
+    previous_speed = 0
+
+    while True:
+
+        speed = gyro_right.speed()
+
+        if previous_speed > 0 and speed < 0:
+            extend()
+
+        elif previous_speed < 0 and speed > 0:
+            retract()
+
+        previous_speed = speed
+
+
+def balance_at_0():
+
+    while True:
+
+        speed = gyro_right.speed()
+    
+        if abs(speed) < 3:
+            extend_retract()
+
+
+def spot_turning_points():
+
+    action_running = False
+
+    while True:
+
+        speed_robot = gyro_right.speed()
+        angle_robot = gyro_left.angle()
+
+        if abs(speed_robot) < ZERO_GAP and not action_running:
+
+            if angle_robot > 0:
+                extend()
+                action_running = True
+
+            elif angle_robot < 0:
+                retract()
+                action_running = True
+
+        elif abs(speed_robot) > ZERO_GAP * 1.5:
+            action_running = False
+
+        else:
+            pass
+
+        wait(10)
+
+def spot_turning_points_upgraded():
+
+    action_running = False
+    was_moving = False
+
+    while True:
+
+        speed_robot = gyro_right.speed()
+        angle_robot = gyro_left.angle()
+
+        if abs(speed_robot) > ZERO_GAP * 1.5:
+            was_moving = True
+            action_running = False
+
+        elif abs(speed_robot) < ZERO_GAP and was_moving and not action_running:
+
+            if angle_robot > 0:
+                extend()
+                action_running = True
+
+            elif angle_robot < 0:
+                retract()
+                action_running = True
+
+            was_moving = False
+
+        wait(10)
+
+def test_gyros_list():
+
+    gyro_right.reset_angle(0)
+    gyro_left.reset_angle(0)
+
+    speed_values = []
+    angle_values = []
+
+    for i in range(200):
+
+        speed_robot = gyro_right.speed()
+        angle_robot = gyro_left.angle()
+
+        speed_values.append(speed_robot)
+        angle_values.append(angle_robot)
+
+        wait(25)
+
+    print("SPEED")
+    for value in speed_values:
+        print(value)
+
+    print("ANGLE")
+    for value in angle_values:
+        print(value)
+
+def beep_at_turning_point():
+    
+    while True:
+
+    speed_robot = gyro_right.speed()
+
+    if abs(speed_robot) < ZERO_GAP:
+        hub.speaker.beep()
+
+    wait(100)
+
+test_gyros_list()
+
 
 
 
