@@ -151,7 +151,7 @@
 ### RDV avec M. Andonie
 - reçu des explications sur le mouvement de pendule
 - fait un croquis que j'ai précieusement gardé 
-- défini des salles ou je puisse travailler → G00? et sous sol
+- défini des salles ou je puisse travailler → G009 et sous sol
 - pris les pièces principales pour la construction du robot
 
 ## Date 11/06/2026
@@ -168,7 +168,7 @@
     - coordonne les 2 mouvements 
 
 ## Date 24/06/2026
-### Travail en salle G00? et sous sol
+### Travail en salle G009 et sous sol
 - construit le bas du corps du robot humanoide:
     - jambes mobiles → moteurs en tant que acticulations
     - bassin solide → rattaché à un moteur pour le dos
@@ -182,18 +182,16 @@
     - prévoir de la place entre les pièces pour des cables
 
 ## Date 03/07/2026
-### Travail en salle G00? et sous sol
+### Travail en salle G009 et sous sol
 - construit le haut du corps du robot humanoide:
     - bien fixé la brique intelligente EV3 → sur le moteur du dos
     - difficulé à tout sécuriser → le moteur du dos se déplie tout seul
     - petits bras mobiles → rattachés à la brique intelligente EV3
-
 - testé à placer le robot sur la balançoire:
     - tient pas en equilibre → doit être fixé à la balançoire
     - fait la bonne taille et un bon poids
     - les pieds touchent pas le sol → se mettra en mouvement sans pousser
     - mesuré ou le robot sera fixé
-
 - envoyé le code (fait le 17/06/2026) au robot:
     - le code s'envoie point
     - charge en boucle
@@ -213,3 +211,75 @@
     - comparé la manière "humaine" à se balancer à une autre possible dite "plus efficace"
     - choisi de programmer de manière humaine → question de simplicité
     - pris des notes là-dessus
+
+## Date 14/08/2026
+- vicé le robot à la balançoire
+- il peut être librement détaché si besoin
+
+## Date 20/08/2026
+### Travail depuis chez moi
+- écrit le premier jet du code
+- si tout se passe bien, il ne reste plus qu'à tester
+
+## Date 21/08/2026
+- réussi à transporter la balançoire et le robot chez moi
+- les tests peuvent enfin avoir lieu
+
+## Date 22/08/2026
+### Travail depuis chez moi
+- testé le jet 1 du code, il ne marche pas
+- testé les articulations une par une
+- le dos ne se remplie pas → le moteur pas assez puissant
+- crée un programme qui bouge les articulations en même temps
+- le dos casse le mouvement → le robot bougera donc pas le dos
+- création de la version du programme sans le dos
+- le robot se balance, mais avec de l'aide et au mauvais moment
+
+## Date 23/08/2026
+### Travail depuis chez moi
+- testé le capteur gyroscopique
+- detecte que la vitesse angulaire et PAS l'angle
+- changé les modes manuellement, sans résultat
+- affiché les valeurs, cela n'aide pas
+- élaboré un code qui fonctionne que avec la vitesse angulaire
+    -  cherché le moment ou la vitesse change de signe → point mort
+- identifié si le point mort était à l'arrière ou devant
+    -  véfifié si on passe de vitesse ang. positive à négative ou l'inverse
+### Conclusion:
+- le capteur est pas précis, même en élargissant le seuil d'activation
+- le capteur mesure pas l'angle mais que la vitesse ang.
+### Solution: 
+- trouvé une nouvelle variante du programme qui fonctionne, mais au mauvais moment
+
+## Dates 24/08/2026 - 01/09/2026
+### Travail depuis chez moi
+- continué l'avancement de la partie écrite
+- fini le premier jet de l'écrit, contient tout sauf:
+    -  Résumé
+    -  Code
+    -  Analyse des résultats
+    -  Conclusion
+
+### RDV avec M. Andonie (27/08/2026)
+- reçu un 2 eme capteur gyro
+  - → le même capteur ne peut pas afficher la vitesse ang et l'angle à la fois
+- reçu plus de grands moteurs
+  - → pour reconstruire le dos et pour qu'il marche enfin
+- discuté de tous les essais que j'ai fait
+- conclu que il faut essayer encore
+
+### Date 30/08/2026
+- reconstruit complètement le dos du robot
+  - changé les moteurs du dos
+  - changé la manière de fixer l'articulation
+  - → le dos marche
+- ajouté le 2 eme capteur gyro
+  - modifié le code pour l'inclure
+  - fixé sur le robot
+  - → j'ai enfin la vitesse ang et l'angle à la fois
+- le dos mobile déséquilibrait le siège lors du mouvement
+  - raccourci le siège
+  - modifié le code de base
+  - → le mouvement d'extension se fait différemment maintenant
+- testé plusieurs nouvelles idées de code
+- → résultat toujour le même, le robot détecte mal les points morts
