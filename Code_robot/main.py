@@ -7,9 +7,6 @@ from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 
-
-# Create your objects here.
-
 ev3 = EV3Brick()
 
 leg_left = Motor(Port.D)
@@ -29,7 +26,7 @@ LEG_ANGLE = 90       # Extension des jambes
 BACK_ANGLE = 60      # Inclinaison du dos
 
 ZERO_GAP = 2
-NOT_ZERO_GAP = 10
+NOT_ZERO_GAP = 11
 
 # Fonctions
 
