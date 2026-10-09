@@ -304,8 +304,9 @@
 	- câbles
 	- pièces de LEGO
 - testé et filmé 5 codes différents avec le robot
-- écrit un code qui affiche toutes les valeurs lors du balancement
+- écrit un code qui affiche toutes les valeurs lors du balancement `test_gyros_list()`
 - affiché ces valeurs avec un graphique → pour trouver la source du problème
+- écrit un code qui fait biper le robot aux points d'inversion `beep_at_turning_point()`
 
 ## Date 02/10
 ### Visio avec M. Andonie
@@ -321,3 +322,37 @@
 - si pas de résultat le 04/01 → mettre dans l'écrit les meilleurs codes
 
 ## Dates 02/10 - 04/10 : semaine 2
+- fait des tests pour trouver un code qui marche:
+	- enlevé les `wait(10)` des fonctions `extend()` et `retract()`
+	- remis la balançoire à l'horizontale en utilisant un niveau à bulle
+	- pas pu changer la position du capteur
+	- fait une oscillation lentement avec les mains et affiché les valeurs
+ 	- retesté chaque code existant une fois
+	- mélangé le code `spot_the_0_upgraded()` et `changing_signs()` pour créer `changing_signs_upgraded()`
+ - `changing_signs_upgraded()` fonctionne de manière satisfaisante
+ - mais toujours pas idéale → fait le choix d'arrêter mes recherches à là
+
+## Dates 05/10 - 07/10 : semaine 3
+- finalisé l'écrit:
+	- Résumé
+    - Codes
+    - Analyse des résultats
+    - Conclusion
+    - Annexes
+
+## Date 08/10 : semaine 3
+- imprimé l'écrit x2 : n/b + couleur 
+- relié l'exemplaire en couleur
+
+## Dates 09/10 - 11/10 : semaine 3
+- imprimé et signé l' attestation d'authenticité
+- rempli le pdf du résumé
+- crée une version anonynisée de l'écrit
+
+
+
+
+
+
+
+
