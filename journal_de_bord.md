@@ -189,7 +189,7 @@
 - testé à placer le robot sur la balançoire:
     - ne tient pas en équilibre → doit être fixé à la balançoire
     - fait la bonne taille et un bon poids
-    - les pieds ne touchent pas le sol → se mettra en mouvement sans pousser
+    - les pieds ne touchent pas le sol → se mettra en mouvement avec de l'aide de ma part
     - mesuré où le robot sera fixé
 - envoyé le code (fait le 17/06) au robot:
     - le code ne s'envoie point
@@ -229,9 +229,9 @@
 ### Travail depuis chez moi
 - testé le jet 1 du code, il ne marche pas
 - testé les articulations une par une
-- le dos ne se remplit pas → le moteur pas assez puissant
+- le dos ne se replie pas → le moteur pas assez puissant
 - créé un programme qui bouge les articulations en même temps
-- le dos casse le mouvement → le robot ne bougera donc pas le dos
+- le dos casse le mouvement → problème à régler
 - création de la version du programme sans le dos
 - le robot se balance, mais avec de l'aide et au mauvais moment
 
@@ -242,8 +242,8 @@
 - changé les modes manuellement, sans résultat
 - affiché les valeurs, cela n'aide pas
 - élaboré un code qui fonctionne que avec la vitesse angulaire
-    - cherché le moment où la vitesse change de signe → point mort
-- identifié si le point mort était à l'arrière ou devant
+    - cherché le moment où la vitesse change de signe → point d'inversion
+- identifié si le point d'inversion était à l'arrière ou devant
     - vérifié si on passe de vitesse ang. positive à négative ou l'inverse
 ### Conclusion:
 - le capteur n'est pas précis, même en élargissant le seuil d'activation
@@ -263,7 +263,7 @@
 
 ## Date 27/08
 ### RDV avec M. Andonie
-- reçu un 2 eme capteur gyro
+- reçu un 2e capteur gyro
   - → le même capteur ne peut pas afficher la vitesse ang et l'angle à la fois
 - reçu plus de grands moteurs
   - → pour reconstruire le dos et pour qu'il marche enfin
@@ -275,7 +275,7 @@
   - changé les moteurs du dos
   - changé la manière de fixer l'articulation
   - → le dos marche
-- ajouté le 2 eme capteur gyro
+- ajouté le 2e capteur gyro
   - modifié le code pour l'inclure
   - fixé sur le robot
   - → j'ai enfin la vitesse ang et l'angle à la fois
@@ -331,8 +331,10 @@
 	- mélangé le code `spot_the_0_upgraded()` et `changing_signs()` pour créer `changing_signs_upgraded()`
  - `changing_signs_upgraded()` fonctionne de manière satisfaisante
  - mais toujours pas idéale → fait le choix d'arrêter mes recherches à là
+ - trouvée la source « playground swing »
 
 ## Dates 05/10 - 07/10 : semaine 3
+- complété la partie théorique → la source « playground swing »
 - finalisé l'écrit:
 	- Résumé
     - Codes
@@ -345,9 +347,9 @@
 - relié l'exemplaire en couleur
 
 ## Dates 09/10 - 11/10 : semaine 3
-- imprimé et signé l' attestation d'authenticité
+- imprimé et signé l'attestation d'authenticité
 - rempli le pdf du résumé
-- crée une version anonynisée de l'écrit
+- créé une version anonymisée de l'écrit
 
 
 
