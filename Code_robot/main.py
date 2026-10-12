@@ -22,8 +22,8 @@ gyro_left = GyroSensor(Port.S3)
 SPEED_LEG = 400      # °/s
 SPEED_BACK = 200
 
-LEG_ANGLE = 90       # Extension des jambes
-BACK_ANGLE = 60      # Inclinaison du dos
+ANGLE_LEG = 90       # Extension des jambes
+ANGLE_BACK = 60      # Inclinaison du dos
 
 ZERO_GAP = 2
 NOT_ZERO_GAP = 11
@@ -34,35 +34,27 @@ def extend():
 
     back_left.run_target(SPEED_BACK, 0, wait=False)
     back_right.run_target(SPEED_BACK, 0, wait=True)
-    leg_left.run_target(SPEED_LEG, -LEG_ANGLE, wait=False)
-    leg_right.run_target(SPEED_LEG, -LEG_ANGLE, wait=True)
-    
-
-    wait(1000)
+    leg_left.run_target(SPEED_LEG, -ANGLE_LEG, wait=False)
+    leg_right.run_target(SPEED_LEG, -ANGLE_LEG, wait=True)
 
     leg_left.hold()
     leg_right.hold()
     back_left.hold()
     back_right.hold()
-
-    wait(1000)
 
     
 def retract():
 
-    back_left.run_target(SPEED_LEG, -BACK_ANGLE, wait=False)
-    back_right.run_target(SPEED_LEG, -BACK_ANGLE, wait=False)
+    back_left.run_target(SPEED_BACK, -ANGLE_BACK, wait=False)
+    back_right.run_target(SPEED_BACK, -ANGLE_BACK, wait=False)
     leg_left.run_target(SPEED_LEG, 0, wait=False)
     leg_right.run_target(SPEED_LEG, 0, wait=True)
-    
-    wait(1000)
 
     leg_left.hold()
     leg_right.hold()
     back_left.hold()
     back_right.hold()
 
-    wait(1000)
  
 
 def reset_all_angles():
@@ -90,13 +82,13 @@ def extend_retract():
 
     back_left.run_target(SPEED_BACK, 0, wait=False)
     back_right.run_target(SPEED_BACK, 0, wait=True)
-    leg_left.run_target(SPEED_LEG, -LEG_ANGLE, wait=False)
-    leg_right.run_target(SPEED_LEG, -LEG_ANGLE, wait=True)
+    leg_left.run_target(SPEED_LEG, -ANGLE_LEG, wait=False)
+    leg_right.run_target(SPEED_LEG, -ANGLE_LEG, wait=True)
     
     wait(1000)
 
-    back_left.run_target(SPEED_LEG, -BACK_ANGLE, wait=False)
-    back_right.run_target(SPEED_LEG, -BACK_ANGLE, wait=False)
+    back_left.run_target(SPEED_LEG, -ANGLE_BACK, wait=False)
+    back_right.run_target(SPEED_LEG, -ANGLE_BACK, wait=False)
     leg_left.run_target(SPEED_LEG, 0, wait=False)
     leg_right.run_target(SPEED_LEG, 0, wait=True)
 
@@ -132,11 +124,11 @@ def balance_at_0():
 
         speed = gyro_right.speed()
     
-        if abs(speed) < 3:
+        if abs(speed) < ZERO_GAP:
             extend_retract()
 
 
-def spot_turning_points():
+def spot_the_0():
 
     action_running = False
 
@@ -160,34 +152,6 @@ def spot_turning_points():
 
         else:
             pass
-
-        wait(10)
-
-def spot_turning_points_upgraded():
-
-    action_running = False
-    was_moving = False
-
-    while True:
-
-        speed_robot = gyro_right.speed()
-        angle_robot = gyro_left.angle()
-
-        if abs(speed_robot) > NOT_ZERO_GAP:
-            was_moving = True
-            action_running = False
-
-        elif abs(speed_robot) < ZERO_GAP and was_moving and not action_running:
-
-            if angle_robot > 0:
-                extend()
-                action_running = True
-
-            elif angle_robot < 0:
-                retract()
-                action_running = True
-
-            was_moving = False
 
         wait(10)
 
@@ -234,8 +198,65 @@ def beep_at_turning_point():
 
         wait(10)
 
+def spot_the_0_upgraded():
 
-beep_at_turning_point()
+    was_swinging = True
+    action_running = False
+
+    while True:
+
+        speed_robot = gyro_right.speed()
+        angle_robot = gyro_left.angle()
+
+        if abs(speed_robot) > NOT_ZERO_GAP:
+            was_swinging = True
+            action_running = False
+
+        elif abs(speed_robot) < ZERO_GAP and was_swinging and not action_running:
+
+            if angle_robot > 0:
+                extend()
+                action_running = True
+
+            elif angle_robot < 0:
+                retract()
+                action_running = True
+
+            was_swinging = False
+
+        wait(10)
+
+def changing_signs_upgraded():
+
+    was_swinging = False
+    action_running = False
+    previous_speed = 0
+
+    while True:
+
+        speed_robot = gyro_right.speed()
+
+        if abs(speed_robot) > NOT_ZERO_GAP:
+            was_swinging = True
+            action_running = False
+
+        elif previous_speed > 0 and speed_robot < 0 and was_swinging and not action_running:
+            extend()
+            was_swinging = False
+            action_running = True
+            
+        elif previous_speed < 0 and speed_robot > 0 and was_swinging and not action_running:
+            retract()
+            was_swinging = False
+            action_running = True
+            
+
+        previous_speed = speed_robot
+
+        wait(10)
+
+changing_signs_upgraded()
+
 
 
 
